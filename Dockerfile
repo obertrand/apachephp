@@ -20,7 +20,7 @@ RUN buildDeps=" \
     && docker-php-ext-install mbstring \
     && docker-php-ext-install mysqli
     
+ADD ./serve.sh /serve.sh
+RUN chmod +x /*.sh
 
-
-
-
+CMD ["/serve.sh"]
